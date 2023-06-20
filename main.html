@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> <!-- Vue.js Skript  -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PlanetEmissionsTracker</title>
@@ -8,6 +9,7 @@
 <link rel="stylesheet" href="Layout.css">
 </head>
 <body>
+  <div id="app"> <!-- Vue.js app eingefügt  -->
   <header>
     <!-- Logo + Name der Website  -->
     <img src="https://akzente.giz.de/sites/default/files/giz_akzente_CO2-Ausstoss-weltweit_header.jpg" alt="Logo">
@@ -37,7 +39,7 @@
     </nav>
     <!-- Überschrift + Feld zum Filtern  -->
     <h3>CO2-Emissionsdaten</h3>
-    <input type="text" class="filter-input" placeholder="Filtern">
+    <input type="text" v-model="filter" placeholder="Filtern">  <!-- Vue.js Filter -->
   
     <!-- Tabelle + Daten -->
     <table id="emissions-table">
@@ -49,20 +51,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Deutschland</td>
-          <td>Schaeffler</td>
-          <td>1000</td>
-        </tr>
-        <tr>
-          <td>Deutschland</td>
-          <td>Audi</td>
-          <td>1500</td>
-        </tr>
-        <tr>
-          <td>Italien</td>
-          <td>Ferrari</td>
-          <td>850</td>
+        <tr v-for="row in filteredRows" :key="row.company"> <!-- Vue.js Syntax -->
+          <td>{{ row.country }}</td>
+          <td>{{ row.company }}</td>
+          <td>{{ row.emission }}</td>
         </tr>
       </tbody>
     </table>
@@ -71,6 +63,8 @@
   <footer>
     &copy; 2023 PlanetEmissionsTracker. Alle Rechte vorbehalten.
   </footer>
+</div> <!-- Vue.js app eingefügt  -->
+
+<script src="app.js"></script>
 </body>
 </html>
-

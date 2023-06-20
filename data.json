@@ -1,0 +1,12 @@
+[
+    {"country": "Deutschland", "company": "Schaeffler", "emission": 1000},
+    {"country": "Deutschland", "company": "Audi", "emission": 1500},
+    {"country": "Italien", "company": "Ferrari", "emission": 850},
+    {"country": "USA", "company": "Apple", "emission": 2200},
+    {"country": "USA", "company": "Tesla", "emission": 3500},
+    {"country": "USA", "company": "Google", "emission": 2700},
+    {"country": "Deutschland", "company": "BMW", "emission": 4100},
+    {"country": "Italien", "company": "Lamborgini", "emission": 1100},
+    {"country": "Schwenden", "company": "Volvo", "emission": 3900},
+    {"country": "Deutschland", "company": "Opel", "emission": 3400}
+  ]
