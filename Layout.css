@@ -19,7 +19,7 @@
   header img {
     width: 180px;
     height: 120px;
-    border-radius: 10%; /* Radios Logo */
+    border-radius: 50%; /* Radios Logo */
   }
   h1 {
   font-size: 3vw; /* Responsive Schriftgröße */
@@ -46,6 +46,16 @@
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
     border-radius: 10px;
   }
+  main h2, main p {
+    text-align: center; 
+    font-size: 2vw; 
+}
+
+@media (max-width: 600px) {
+    main h2, main p {
+        font-size: 3vw; 
+    }
+}
   table {
     width: 100%;
     border-collapse: collapse;
